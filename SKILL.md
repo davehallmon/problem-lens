@@ -1,7 +1,11 @@
 ---
 name: problem-lens
 description: Analyze a problem, generate options, or find solutions. Use when the user says "solve this", "analyze this problem", "what are my options", "help me decide", or "generate solutions". Returns five diverse solutions plus an Occam's Razor anchor, ranked by coverage, effort, or another framework the user picks.
-allowed-tools: Read, AskUserQuestion
+allowed-tools:
+  - Read
+  - AskUserQuestion
+license: MIT
+compatibility: Requires Claude with Skills support (Projects or Claude Code)
 ---
 
 # Problem Lens

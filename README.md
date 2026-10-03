@@ -20,7 +20,7 @@ Most problem-solving prompts give you one angle. This one gives you twelve, then
 
 ## Demo
 
-*Screen capture coming soon.*
+*Demo coming soon.*
 
 ## Install
 

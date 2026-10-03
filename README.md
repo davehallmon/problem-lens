@@ -20,7 +20,7 @@ Most problem-solving prompts give you one angle. This one gives you twelve, then
 
 ## Demo
 
-Coming Soon
+*Screen capture coming soon.*
 
 ## Install
 
@@ -44,6 +44,22 @@ Coming Soon
 2. Copy `problem-lens/` into `.claude/skills/` in your project repo.
 3. Restart Claude Code.
 4. Ask: "Analyze this problem: ..."
+
+## Requirements
+
+- **Claude access** with Skills support:
+  - Claude Projects (claude.ai)
+  - Claude Code (CLI)
+- **A problem to analyze.** The Skill needs a problem statement and background context.
+- **No dependencies.** This Skill is Markdown-only. No scripts, no packages, no API keys.
+
+### Supported Platforms
+
+| Platform | Path |
+|---|---|
+| Claude Projects | `.claude/skills/problem-lens/` |
+| Claude Code (personal) | `~/.claude/skills/problem-lens/` |
+| Claude Code (project) | `.claude/skills/problem-lens/` |
 
 ## Try First
 

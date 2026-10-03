@@ -24,20 +24,20 @@ Thanks for your interest. This project welcomes contributions.
 - Use short words.
 - Cut filler.
 - No clichés.
-- Keep `SKILL.md` under 500 lines.
-- Put detail in `references/`.
+- Keep `problem-lens/SKILL.md` under 500 lines.
+- Put detail in `problem-lens/references/`.
 
 ## Adding a Lens
 
-1. Add the lens to `references/lenses.md`.
+1. Add the lens to `problem-lens/references/lenses.md` under one of the five families.
 2. Include a one-line "Use when" note.
-3. Update the lens count in `README.md` and `SKILL.md` if needed.
+3. Update the family table in `problem-lens/references/lenses.md` and `README.md`, and the lens count if needed.
 
 ## Adding a Ranking Framework
 
-1. Add the framework to `references/ranking-frameworks.md`.
+1. Add the framework to `problem-lens/references/ranking-frameworks.md`.
 2. Include a one-line "Best when" note.
-3. Update the framework list in `README.md` and `SKILL.md`.
+3. Update the framework list in `README.md` and `problem-lens/SKILL.md`.
 
 ## Code of Conduct
 

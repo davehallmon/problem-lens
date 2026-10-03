@@ -20,7 +20,7 @@ Most problem-solving prompts give you one angle. This one gives you twelve, then
 
 ## Demo
 
-*(Add a 60-second screen capture here. Show the input, the table, and the decision prompt.)*
+Comming Soon
 
 ## Install
 

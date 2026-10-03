@@ -4,7 +4,7 @@
 Three sentences or less.
 
 ## Solution Table
-Six rows. Five solutions plus the Occam's Razor anchor.
+Six rows. Five solutions plus the Occam's Razor anchor. Rows 1–5 take primary lenses from five different families. See `SKILL.md` for the full table rules.
 
 | Priority | Solution | Lens Tags | When To Use This Lens | Rationale | Risk |
 |---|---|---|---|---|---|
@@ -25,6 +25,8 @@ Use `AskUserQuestion`. Multi-select. Options:
 - Add more solutions
 - Re-rank
 - Done
+
+If `AskUserQuestion` is not available, show the four options as a numbered list. Ask the user to reply with one or more numbers.
 
 ## Rules
 

@@ -1,6 +1,16 @@
 # Lenses
 
-Twelve lenses. Use all twelve to generate candidates. Show only the winners.
+Twelve lenses in five families. Run all twelve internally to generate candidates. Show only the winners.
+
+Each row in rows 1–5 takes its primary lens from a different family. Occam's Razor is reserved for the anchor.
+
+| Family | Lenses |
+|---|---|
+| Generation | CPS, Divergent Thinking, Solution Space Exploration, TRIZ / TIPS |
+| Diagnosis | Root Cause Analysis |
+| Perspective | Cynefin, Six Thinking Hats |
+| Fundamentals | First Principles, Occam's Razor (anchor only) |
+| Process | Design Thinking, PDCA, OODA |
 
 ## Generation Lenses
 
@@ -26,13 +36,15 @@ Use when: the problem hides a trade-off to break.
 Ask "why" until the real cause appears. Use 5 Whys or a Fishbone diagram.
 Use when: the symptom is visible but the cause is not.
 
+## Perspective Lenses
+
 ### Cynefin Framework
-Classify the problem: simple, complicated, complex, or chaotic. Match the method to the type.
+Classify the problem: clear, complicated, complex, or chaotic. Match the method to the type.
 Use when: the user applies the wrong method to the problem type.
 
 ### Six Thinking Hats
-View the problem from facts, emotions, risks, benefits, creativity, and process.
-Use when: the user needs perspectives, not solutions.
+Look at the problem from facts, feelings, risks, benefits, new ideas, and process. Find the solution a missing view would suggest.
+Use when: one view dominates and others are missing.
 
 ## Fundamentals Lenses
 
@@ -43,6 +55,7 @@ Use when: inherited assumptions block progress.
 ### Occam's Razor
 Pick the explanation with the fewest assumptions.
 Use when: the solution is buried under complexity.
+Anchor only. Never a primary lens in rows 1–5.
 
 ## Process Lenses
 

@@ -8,7 +8,7 @@ A Claude Skill that analyzes any problem through twelve lenses.
 
 ## Get It
 
-[github.com/davehallmon/problem-lens](https://github.com/<YOUR-USERNAME>/problem-lens)
+[github.com/davehallmon/problem-lens](https://github.com/davehallmon/problem-lens)
 
 ## What It Does
 

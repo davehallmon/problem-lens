@@ -30,14 +30,20 @@ Thanks for your interest. This project welcomes contributions.
 ## Adding a Lens
 
 1. Add the lens to `problem-lens/references/lenses.md` under one of the five families.
-2. Include a one-line "Use when" note.
-3. Update the family table in `problem-lens/references/lenses.md` and `README.md`, and the lens count if needed.
+2. Include a one-line "Use when" note that does not overlap another lens in the same family.
+3. Add an entry to `problem-lens/references/learn-more.md` with a checked link, or `Link: none` and the reason.
+4. Update the family table in `problem-lens/references/lenses.md` and `README.md`, and the lens count if needed.
 
 ## Adding a Ranking Framework
 
 1. Add the framework to `problem-lens/references/ranking-frameworks.md`.
 2. Include a one-line "Best when" note.
-3. Update the framework list in `README.md` and `problem-lens/SKILL.md`.
+3. Add an entry to `problem-lens/references/learn-more.md`.
+4. Update the framework list in `README.md` and `problem-lens/SKILL.md`.
+
+## Testing
+
+Run `python3 evals/check_rules.py problem-lens/examples/*.md` before opening a pull request. Changes to Skill behavior should come with a new round in `evals/`.
 
 ## Code of Conduct
 

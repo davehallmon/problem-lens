@@ -1,4 +1,4 @@
-# Blind Judgments — 2026-10-03
+# Blind Judgments — Round 1, version 1.0.0 (2026-10-03)
 
 One judge agent per input. Each judge saw two responses labeled A and B, with the order randomized. The judges were not told which response used the Skill. The Skill output had its test-harness Turn 1 block removed. Skill run 1 was used for each input; it was not chosen for quality.
 

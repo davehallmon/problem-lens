@@ -1,8 +1,8 @@
-# Blind Judgments — v1.1 (2026-10-03)
+# Blind Judgments — Round 2, draft (2026-10-03)
 
-One judge per input. Each judge compared Skill run 1 against a no-Skill baseline, with A and B order alternated. The judging criteria and the 1–5 scale are the same as in the v1.0 round.
+One judge per input. Each judge compared Skill run 1 against a no-Skill baseline, with A and B order alternated. The judging criteria and the 1–5 scale are the same as in round 1.
 
-The baselines for onboarding, revenue, and career are the same files used in the v1.0 round. The gym baseline agent returned its answer without saving the file, so its returned text was saved verbatim.
+The baselines for onboarding, revenue, and career are the same files used in round 1. The gym baseline agent returned its answer without saving the file, so its returned text was saved verbatim.
 
 ## Totals (out of 35)
 
@@ -34,11 +34,11 @@ Result: the Skill won 0, tied 2, and lost 9. Mean total: Skill 27.3, baseline 29
 | Decision support | 4.27 | 4.27 |
 | Efficiency | 3.45 | 3.82 |
 
-## Change from v1.0 (same three inputs)
+## Change from round 1 (same three inputs)
 
-| | v1.0 Skill | v1.1 Skill | Baseline |
+| | Round 1 Skill | Round 2 Skill | Baseline |
 |---|---|---|---|
-| Mean total | 25.0 | 27.7 | 30.0 (v1.1 round) / 31.0 (v1.0 round) |
+| Mean total | 25.0 | 27.7 | 30.0 (round 2) / 31.0 (round 1) |
 | Decision support | 2.3 | 4.3 | 4.3 / 5.0 |
 
 ## What the judges said again and again

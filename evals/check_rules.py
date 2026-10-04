@@ -77,6 +77,10 @@ def sentences(text):
 
 def check(path, family, use_when):
     text = Path(path).read_text()
+    # Worked examples carry an Input section and a recording note; check only the output
+    if "## Output" in text:
+        text = text.split("## Output", 1)[1]
+    text = "\n".join(l for l in text.splitlines() if not l.startswith("_Recorded run"))
     plain = strip_md(text)
     lines = text.splitlines()
     fails, info = [], {"primaries": [], "anchor": None}

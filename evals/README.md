@@ -1,62 +1,50 @@
 # Evaluations
 
-Recorded live runs of the Skill, a rule checker, and a no-Skill baseline comparison. Nothing in this folder is part of the installed Skill.
+Every version of problem-lens is tested against plain Claude, with no Skill, on the same problems. Nothing in this folder is part of the installed Skill.
 
-## Run: 2026-10-03
+## Method
 
-- **Skill version:** `main` at commit `2d3e21a`.
-- **Model:** Claude Opus 5.5, run through fresh agents. Each agent saw only `SKILL.md` and `references/`. None saw the examples.
-- **Inputs:** the three example problems (onboarding drop-off, flat revenue, career decision).
-- **Skill runs:** 3 per input, 9 in total.
-- **Baseline:** 1 run per input, using the same model and the same user message, with no Skill.
-- **Judging:** one blind judge per input compared Skill run 1 against the baseline, with A/B order randomized.
+- **Skill runs:** fresh agents saw only `SKILL.md` and `references/`, never the examples. `AskUserQuestion` was not available, so runs use the numbered-list fallback.
+- **Baseline:** the same model and the same user message, with no Skill.
+- **Judging:** one blind judge per problem compared Skill run 1 with the baseline. A/B order was alternated. Seven criteria were scored 1–5, for a maximum of 35.
+- **Rule checks:** `check_rules.py` tests structure only. It does not judge whether the advice is good.
 
-### Test conditions
+## Results
 
-- The user was not available for follow-up. When the Skill asked Turn 1 questions, the harness replied "No more information. Go ahead."
-- `AskUserQuestion` was not available, so these runs exercised the numbered-list fallback.
+| Round | Version | Problems | Skill wins–ties–losses | Mean Skill | Paired gap |
+|---|---|---|---|---|---|
+| 1 | 1.0.0 | 3 | 0–0–3 | 25.0 | −6.0 |
+| 2 | draft | 11 | 0–2–9 | 27.3 | −2.5 |
+| 3 | 1.1.0 | 11 | 5–2–4 | 29.0 | +0.1 |
 
-### Results
+Round 3, mean score by criterion:
 
-**Rule compliance:** 8 of 9 runs passed every structural rule. One run had a 5-sentence summary; the limit is 3. See [`runs/2026-10-03/check-output.txt`](runs/2026-10-03/check-output.txt).
+| Criterion | Skill 1.1.0 | Plain Claude |
+|---|---|---|
+| Diagnosis | 4.09 | 4.55 |
+| Option diversity | 4.18 | 3.73 |
+| Actionability | 4.64 | 4.18 |
+| Fit to the user's details | 3.73 | 4.64 |
+| Honesty | 4.55 | 3.73 |
+| Decision support | 4.45 | 4.27 |
+| Efficiency | 3.36 | 3.82 |
 
-| Behavior | Count |
-|---|---|
-| Five distinct primary families | 9 / 9 |
-| `When To Use This Lens` matches the lens | 9 / 9 |
-| Numbered fallback used | 9 / 9 |
-| Asked Turn 1 questions before answering | 9 / 9 |
-| Anchor marked `Matches row N` (adds no new option) | 5 / 9 |
-| Root Cause Analysis as row 1 | 9 / 9 |
-| Distinct lenses used as primary (of 12) | 6 |
+Other checks in round 3:
+- **Rule compliance:** 11 of 11 runs passed `check_rules.py`.
+- **Lens rotation:** 10 of 11 eligible lenses were used as a primary lens. OODA was not.
+- **Trivial problems:** a trivial problem was correctly declined and answered directly.
 
-Primary lens counts across the 9 runs (45 rows):
-- Root Cause Analysis 9
-- First Principles 9
-- TRIZ / TIPS 9
-- Six Thinking Hats 9
-- PDCA 5
-- Design Thinking 4
+## Caveats
 
-These six lenses were never primary: CPS, Divergent Thinking, Solution Space Exploration, Cynefin, OODA, Occam's Razor. Occam's Razor is reserved for the anchor by design.
+- **Judge noise is real.** The same baseline files scored about 1.4 points differently between rounds 2 and 3. Treat any single comparison as noisy. The trend is clearer: the Skill improved on 10 of 11 problems from round 2 to round 3.
+- **Same model family.** Generator, baseline, and judges are all the same model family, with one judge per pair.
+- **Not tested here:** whether the Skill triggers on claude.ai, and how `AskUserQuestion` renders there.
 
-**Skill vs. baseline:** the baseline won all three blind judgments, 32–23, 32–25, and 29–27. The Skill tied or beat the baseline on option diversity, actionability, and honesty, and lost on decision support every time. See [`runs/2026-10-03/judgments.md`](runs/2026-10-03/judgments.md).
+## Next
 
-### Limits of this run
+Future releases will explore fixes for the weak spots: fit to the user's details, reading time, OODA never being chosen, and lens labels that judges called forced. Every round will be logged here, including rounds that lose.
 
-- Small sample: three inputs, one judged pair per input, one judge each.
-- Generator, judges, and baseline are all the same model family.
-- The baseline had no length limit and ran about 1.7 times longer than the Skill output.
-- The judges could tell the formats apart, so the "blind" applies to labels only, not to style.
-- These runs do not test whether the Skill triggers on claude.ai or how `AskUserQuestion` renders there.
+## Files
 
-## Reproduce
-
-Check any output file against the table rules:
-
-```
-python3 evals/check_rules.py evals/runs/2026-10-03/*-skill-*.md
-python3 evals/check_rules.py problem-lens/examples/*.md
-```
-
-The checker tests structure only. It cannot tell you whether the solutions are good. The baseline comparison is what measures that.
+- `runs/round-1_v1.0.0/`, `runs/round-2_draft/`, `runs/round-3_v1.1.0/`: raw outputs, baselines, `judgments.md`, and `check-output.txt`. Rounds 1 and 2 were checked with the rules of their time.
+- `check_rules.py`: run `python3 evals/check_rules.py problem-lens/examples/*.md`

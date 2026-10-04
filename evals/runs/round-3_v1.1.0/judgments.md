@@ -1,12 +1,12 @@
-# Blind Judgments — v1.2 (2026-10-03)
+# Blind Judgments — Round 3, version 1.1.0 (2026-10-03)
 
-Same method as v1.1: one judge per input, Skill run 1 against the same baseline files, same A/B assignment, same criteria and 1–5 scale.
+Same method as round 2: one judge per input, Skill run 1 against the same baseline files, same A/B assignment, same criteria and 1–5 scale.
 
 Totals are summed from each judge's criterion scores. In one case (gym), the judge's written total did not match its own criterion scores (it wrote 30–29; the scores sum to 30–30), so that pair is counted as a tie.
 
 ## Totals (out of 35)
 
-| Input | v1.1 Skill | v1.2 Skill | Baseline | Winner |
+| Input | Round 2 Skill | Round 3 Skill | Baseline | Winner |
 |---|---|---|---|---|
 | Onboarding drop-off | 25 | 26 | 32 | Baseline |
 | Flat revenue | 29 | 30 | 30 | Tie |
@@ -22,14 +22,14 @@ Totals are summed from each judge's criterion scores. In one case (gym), the jud
 
 Result: the Skill won 5, tied 2, and lost 4.
 
-| Mean | v1.1 | v1.2 |
+| Mean | Round 2 | Round 3 |
 |---|---|---|
 | Skill total | 27.3 | 29.0 |
 | Paired gap (Skill minus baseline) | −2.5 | +0.1 |
 
 ## By criterion (mean of 11)
 
-| Criterion | v1.1 Skill | v1.2 Skill | Baseline (this round) |
+| Criterion | Round 2 Skill | Round 3 Skill | Baseline (this round) |
 |---|---|---|---|
 | Diagnosis | 3.36 | 4.09 | 4.55 |
 | Option diversity | 4.09 | 4.18 | 3.73 |
@@ -41,7 +41,7 @@ Result: the Skill won 5, tied 2, and lost 4.
 
 ## How much to trust this
 
-- **Judge noise is about the size of the effect on any one pair.** The same baseline files scored an average of 1.4 points differently between the v1.1 and v1.2 rounds. No single head-to-head result should be over-read.
+- **Judge noise is about the size of the effect on any one pair.** The same baseline files scored an average of 1.4 points differently between rounds 2 and 3. No single head-to-head result should be over-read.
 - **The direction is consistent.** The Skill's score rose on 10 of 11 inputs, by +1.7 on average.
 - All agents are the same model family, with one judge per pair.
 

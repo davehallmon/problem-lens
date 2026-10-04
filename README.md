@@ -1,5 +1,7 @@
 # problem-lens
 
+![problem-lens banner](assets/banner.png)
+
 ![Version](https://img.shields.io/badge/version-1.1.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Claude Skill](https://img.shields.io/badge/Claude-Skill-purple)

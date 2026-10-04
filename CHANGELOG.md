@@ -7,6 +7,8 @@ This project follows Semantic Versioning.
 
 ### Changed
 - New banner: "Twelve lenses. Six moves. One first step." with the OCKHAM maker mark. Removed the old `assets/banner.svg`.
+- Renamed the banner to `assets/banner-v2.png` so GitHub and browsers stop serving the cached old image.
+- README opening line now matches the banner byline.
 - Added `assets/social-preview.png` (1280×640) for the GitHub link card.
 - README: added "The Family" section linking reasoning-lens.
 - GitHub Pages `index.md`: banner image and current copy.

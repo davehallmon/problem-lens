@@ -4,7 +4,7 @@ title: problem-lens
 
 # problem-lens
 
-![problem-lens banner: Twelve lenses. Six moves. One first step.](assets/banner.png)
+![problem-lens banner: Twelve lenses. Six moves. One first step.](assets/banner-v2.png)
 
 A Claude Skill that turns a messy problem into ranked options and a clear place to start.
 

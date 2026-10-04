@@ -1,21 +1,22 @@
 # problem-lens
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-1.1.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Claude Skill](https://img.shields.io/badge/Claude-Skill-purple)
 
-A Claude Skill that analyzes a problem through twelve lenses and returns five diverse solutions plus an Occam's Razor anchor.
+A Claude Skill that tells you what to do first about a problem, backed by five diverse solutions and an Occam's Razor anchor, each from a lens chosen to fit the problem.
 
 ## Why
 
-Most problem-solving prompts give you one angle. This one runs twelve, then keeps one solution from each of five lens families. A `When To Use This Lens` column shows when each lens fits, so you learn the judgment, not just the names.
+Most problem-solving prompts give you one angle. This one picks the best-fitting lens from each of five families and leads with a recommendation, so you can act right away. Each row says in one sentence why its lens fits, so you learn the judgment, not just the names. Ask for more and you get a fuller explanation and a source link.
 
 ## What It Does
 
-- Runs your problem through twelve lenses in five families.
-- Returns five diverse solutions plus an Occam's Razor anchor.
-- Ranks by Coverage, Impact vs. Effort, Confidence vs. Reversibility, or another framework you pick.
-- Ends with a decision prompt so you choose the next move.
+- Answers right away, stating its assumptions instead of asking first.
+- Names two or three likely explanations and the check that tells them apart.
+- Recommends what to do first, and what would change that pick.
+- Returns six moves in the order to act: five solutions from five lens families plus an Occam's Razor anchor.
+- Ends with a prompt to expand a solution, add more, re-rank, or learn more about a lens.
 
 ## Sample Output
 
@@ -55,7 +56,7 @@ Uploaded Skills apply to your account, not to a single Project.
   - claude.ai, with code execution on
   - Claude Code (CLI)
 - **A problem to analyze.** The Skill needs a problem statement and background context.
-- **No dependencies.** This Skill is Markdown-only. No scripts, no packages, no API keys.
+- **No dependencies.** The Skill in `problem-lens/` is Markdown-only. No scripts, no packages, no API keys. The `evals/` folder holds a maintainer-only checker script that is not part of the install.
 
 ### Supported Platforms
 
@@ -87,18 +88,35 @@ Background: B2B SaaS, 200 signups per week, no user interviews yet.
 
 Coverage (default), Impact vs. Effort, Confidence vs. Reversibility, ICE, RICE, Eisenhower, Regret Minimization, Optionality, Cost of Delay.
 
-**How Coverage works:** it picks one solution from each of the five lens families, merges any that work the same way, then orders the five by expected effect on the root problem. Ties go to the cheaper, more reversible move. The other frameworks re-order those same five rows.
+**How Coverage works:** it picks one solution from each of the five lens families, merges any that work the same way, and adds the anchor. Then it puts all six in the order to act: cheap checks that separate the likely explanations come first, then the moves with the most effect on the root problem. Ties go to the cheaper, more reversible move. Re-ranking with another framework changes the order and the recommendation.
 
 ## Output
 
-- 3-sentence summary
-- 6-row table (5 solutions + anchor)
-- Ranking line
-- Multi-select decision prompt
+1. Summary, three sentences or fewer, with stated assumptions
+2. What's Likely Going On: two or three explanations, each with a check
+3. Recommendation: "Do this first" and "Switch to … if"
+4. Six-row table in the order to act, with a one-sentence `Why This Lens` on every row
+5. Ranking line
+6. Up to three questions whose answers would change the pick
+7. Decision prompt: Expand, Add more, Re-rank, Learn more
+
+**Learn more** gives a one-line explanation of each lens or framework, why it fit, and a link from a curated list in `problem-lens/references/learn-more.md`. The Skill never writes links from memory.
 
 ## Examples
 
-See [`problem-lens/examples/`](problem-lens/examples/) for three worked problems: onboarding drop-off, flat revenue, and a career decision.
+See [`problem-lens/examples/`](problem-lens/examples/) for three recorded, unedited runs: onboarding drop-off, flat revenue, and a career decision.
+
+## How It Was Tested
+
+Each version is tested against plain Claude with no Skill, on the same problems, scored by blind judges. All runs, scores, and caveats are in [`evals/`](evals/).
+
+| Version | Problems | Skill vs. plain Claude (wins–ties–losses) | Paired gap (out of 35) |
+|---|---|---|---|
+| 1.0.0 | 3 | 0–0–3 | −6.0 |
+| Draft (round 2) | 11 | 0–2–9 | −2.5 |
+| 1.1.0 | 11 | 5–2–4 | +0.1 |
+
+1.1.0 leads on honesty, actionability, and option diversity. It trails on using the details you give it and on reading time. Future releases will explore fixes for these, and every round will be logged in `evals/`.
 
 ## When Not To Use
 

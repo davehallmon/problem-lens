@@ -3,21 +3,31 @@
 All notable changes to this project are documented here.
 This project follows Semantic Versioning.
 
-## [Unreleased]
+## [1.1.0] — 2026-10-03
+
+### Added
+- "What's Likely Going On": two or three competing explanations, each with a check that tells them apart.
+- Recommendation lines: "Do this first" and "Switch to … if".
+- "Questions That Would Change the Pick", asked after the answer, not before.
+- Learn more option, with one checked link per lens and framework in `references/learn-more.md`.
+- `evals/`: three rounds of live runs, blind comparisons with plain Claude, and a rule checker.
+- GitHub Actions: check examples against the rules, and a weekly check of Learn more links.
 
 ### Changed
+- Answers right away with stated assumptions instead of asking questions first.
+- Lenses are chosen by fit: within each family, the lens whose trigger best matches the problem. Lens triggers were rewritten so they do not overlap.
+- The table follows the order to act. Row 1 is always "Do this first", and the anchor takes its place in that order.
+- `Why This Lens` replaces `When To Use This Lens`, ties the lens to this problem, and is limited to one sentence.
+- The anchor must not repeat another row.
+- "Learn more" replaces "Done" in the decision prompt.
+- Examples are now recorded, unedited runs.
 - Moved the Skill into a `problem-lens/` folder so the install steps match the repo layout.
 - Added a fifth lens family, Perspective (Cynefin, Six Thinking Hats), so five-family coverage is possible.
-- Defined a primary lens per row and how Coverage orders rows 1–5.
-- Reserved Occam's Razor for the anchor and clarified the anchor-match rule.
-- `When To Use This Lens` now names when the lens fits, not when the solution fits.
-- Redefined Six Thinking Hats to find solutions from missing views.
+- Reserved Occam's Razor for the anchor.
 - Renamed Cynefin's "simple" domain to "clear".
 - Added a numbered-list fallback when `AskUserQuestion` is unavailable.
 - Removed unfilled `{problem}` and `{background}` placeholders.
-- Corrected all three examples to follow the table rules. Renamed `software-bug.md` to `onboarding-drop-off.md`.
 - Corrected the claude.ai install steps (ZIP upload in Customize > Skills).
-- Replaced the demo placeholder with a link to a worked example.
 
 ### Removed
 - `assets/demo` placeholder file.

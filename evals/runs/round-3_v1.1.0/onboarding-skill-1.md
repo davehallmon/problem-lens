@@ -1,14 +1,3 @@
-# Example: Onboarding Drop-Off
-
-## Input
-
-Problem: Our onboarding drop-off is 60% at step 3.
-Background: B2B SaaS, 200 signups per week, no user interviews yet.
-
-## Output
-
-_Recorded run: Claude Opus 5.5, 2026-10-03, problem-lens 1.1.0. AskUserQuestion was not available, so the numbered-list prompt appears. Unedited._
-
 **Summary.** The 60% drop-off is a symptom. The likely root is that step 3 asks for something new users can't or won't give yet, like data, access, or a colleague, before they've seen any value. Assuming the 60% counts users who reach step 3, and assuming step 3 is a setup task (integration, import, or invite) and not just a form.
 
 **What's Likely Going On**

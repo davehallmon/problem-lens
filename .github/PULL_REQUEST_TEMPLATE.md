@@ -14,6 +14,7 @@ Link the issue.
 - [ ] I updated `README.md` if needed.
 - [ ] I updated `CHANGELOG.md`.
 - [ ] I tested the Skill on at least one real problem.
+- [ ] I ran `python3 evals/check_rules.py problem-lens/examples/*.md`.
 
 ## Example output
 

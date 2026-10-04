@@ -1,14 +1,3 @@
-# Example: Business Strategy
-
-## Input
-
-Problem: Revenue is flat for three quarters.
-Background: B2B services firm, 40 staff, no marketing team.
-
-## Output
-
-_Recorded run: Claude Opus 5.5, 2026-10-03, problem-lens 1.1.0. AskUserQuestion was not available, so the numbered-list prompt appears. Unedited._
-
 **Summary**
 Flat revenue is a symptom, not the problem. Assuming most new work comes from referrals and senior staff both sell and deliver, the likely root is either no steady way to win new clients or a cap on how much work 40 people can bill. Find out which one it is before you spend on marketing.
 

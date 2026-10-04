@@ -1,14 +1,3 @@
-# Example: Career Decision
-
-## Input
-
-Problem: Should I leave my stable job to join a startup?
-Background: 8 years experience, two kids, six months of savings.
-
-## Output
-
-_Recorded run: Claude Opus 5.5, 2026-10-03, problem-lens 1.1.0. AskUserQuestion was not available, so the numbered-list prompt appears. Unedited._
-
 **Summary**
 "Should I leave?" may be the symptom; the likely root is either why you want out or whether your family can absorb the startup failing. Assuming the startup pays less cash than your current job and you have a specific offer in hand, six months of savings covers one job search but not a pay cut followed by a job search. Assuming no one else's income is certain, the downside lands on your kids too, so the money terms matter as much as the role.
 

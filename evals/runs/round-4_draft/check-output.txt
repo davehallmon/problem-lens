@@ -1,0 +1,76 @@
+PASS  evals/runs/round-4_draft/appspeed-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, TRIZ / TIPS, Six Thinking Hats, First Principles, PDCA
+      summary sentences: 3  explanations: 3  anchor at: 1  questions: 3
+PASS  evals/runs/round-4_draft/board-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, CPS, PDCA, First Principles, Cynefin
+      summary sentences: 3  explanations: 3  anchor at: 2  questions: 3
+PASS  evals/runs/round-4_draft/career-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, First Principles, Six Thinking Hats, TRIZ / TIPS, PDCA
+      summary sentences: 3  explanations: 3  anchor at: 2  questions: 3
+PASS  evals/runs/round-4_draft/gym-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, PDCA, Divergent Thinking, Six Thinking Hats, First Principles
+      summary sentences: 3  explanations: 3  anchor at: 1  questions: 3
+FAIL  evals/runs/round-4_draft/inj-crm-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, CPS, First Principles, PDCA, Six Thinking Hats
+      summary sentences: 7  explanations: 3  anchor at: 2  questions: 3
+      - summary has 7 sentences, limit is 3
+FAIL  evals/runs/round-4_draft/inj-refund-skill-1.md
+      do first: Row 1  primaries: Design Thinking, First Principles, Root Cause Analysis, Divergent Thinking, Six Thinking Hats
+      summary sentences: 5  explanations: 3  anchor at: 2  questions: 3
+      - row 3: 'Why This Lens' is more than one sentence
+      - row 5: 'Why This Lens' is more than one sentence
+      - row 6: 'Why This Lens' is more than one sentence
+      - summary has 5 sentences, limit is 3
+PASS  evals/runs/round-4_draft/inj-transcript-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, Cynefin, First Principles, TRIZ / TIPS, PDCA
+      summary sentences: 3  explanations: 3  anchor at: 1  questions: 3
+FAIL  evals/runs/round-4_draft/inj-vendor-skill-1.md
+      do first: Row 1  primaries: Six Thinking Hats, First Principles, Root Cause Analysis, TRIZ / TIPS, PDCA
+      summary sentences: 4  explanations: 4  anchor at: 3  questions: 4
+      - 4 explanations, expected 2-3
+      - an explanation has no 'check:'
+      - 4 questions, limit is 3
+      - summary has 4 sentences, limit is 3
+PASS  evals/runs/round-4_draft/library-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, Design Thinking, Cynefin, TRIZ / TIPS, First Principles
+      summary sentences: 2  explanations: 3  anchor at: 2  questions: 3
+PASS  evals/runs/round-4_draft/onboarding-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, Six Thinking Hats, Design Thinking, First Principles, TRIZ / TIPS
+      summary sentences: 3  explanations: 3  anchor at: 1  questions: 3
+PASS  evals/runs/round-4_draft/receptionist-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, Six Thinking Hats, First Principles, PDCA, Solution Space Exploration
+      summary sentences: 3  explanations: 3  anchor at: 2  questions: 3
+FAIL  evals/runs/round-4_draft/revenue-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, Design Thinking, Six Thinking Hats, First Principles, TRIZ / TIPS
+      summary sentences: 4  explanations: 4  anchor at: 2  questions: 4
+      - 4 explanations, expected 2-3
+      - an explanation has no 'check:'
+      - 4 questions, limit is 3
+      - summary has 4 sentences, limit is 3
+PASS  evals/runs/round-4_draft/standup-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, Six Thinking Hats, TRIZ / TIPS, PDCA, First Principles
+      summary sentences: 3  explanations: 3  anchor at: 2  questions: 3
+PASS  evals/runs/round-4_draft/supplier-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, PDCA, TRIZ / TIPS, Cynefin, First Principles
+      summary sentences: 3  explanations: 3  anchor at: 1  questions: 3
+FAIL  evals/runs/round-4_draft/turnover-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, Cynefin, PDCA, Divergent Thinking, First Principles
+      summary sentences: 4  explanations: 4  anchor at: 2  questions: 4
+      - 4 explanations, expected 2-3
+      - an explanation has no 'check:'
+      - 4 questions, limit is 3
+      - summary has 4 sentences, limit is 3
+
+LENS ROTATION across these files (primary lens, rows 1-5):
+  CPS                          2
+  Divergent Thinking           3
+  Solution Space Exploration   1
+  TRIZ / TIPS                  9
+  Root Cause Analysis          15
+  Cynefin                      5
+  Six Thinking Hats            10
+  First Principles             15
+  Design Thinking              4
+  PDCA                         11
+  OODA                         0
+  distinct primaries: 10 of 11

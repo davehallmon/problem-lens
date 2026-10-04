@@ -45,6 +45,8 @@ Uploaded Skills apply to your account, not to a single Project.
 3. Restart Claude Code.
 4. Ask: "Analyze this problem: ..."
 
+If you already uploaded the Skill in claude.ai, it also loads in Claude Code when you sign in with the same Claude account.
+
 ### Claude Code (project)
 
 1. Clone this repo.
@@ -70,11 +72,36 @@ Uploaded Skills apply to your account, not to a single Project.
 
 The decision prompt uses `AskUserQuestion` when it is available. Otherwise the Skill shows a numbered list.
 
+## Repo Layout
+
+Only the `problem-lens/` folder is the Skill. Everything else supports development and testing.
+
+```
+problem-lens/                 repo root
+├── problem-lens/             the Skill (install this folder)
+│   ├── SKILL.md              instructions Claude follows
+│   ├── references/           lenses, ranking frameworks, bias guards, output format, Learn more links
+│   └── examples/             three recorded, unedited runs
+├── evals/                    test rounds against plain Claude, plus the rule checker
+├── assets/                   banner and social preview
+├── .github/                  issue templates, PR template, CI checks
+├── CHANGELOG.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── index.md                  GitHub Pages landing page
+└── LICENSE
+```
+
 ## Try First
 
+Copy this prompt:
+
+```
 Analyze this problem: our onboarding drop-off is 60% at step 3.
 
 Background: B2B SaaS, 200 signups per week, no user interviews yet.
+```
 
 ## Lenses
 
@@ -117,6 +144,7 @@ Each version is tested against plain Claude with no Skill, on the same problems,
 | 1.0.0 | 3 | 0–0–3 | −6.0 |
 | Draft (round 2) | 11 | 0–2–9 | −2.5 |
 | 1.1.0 | 11 | 5–2–4 | +0.1 |
+| Draft (round 4) | 11 | 7–1–3 | +1.6 |
 
 1.1.0 leads on honesty, actionability, and option diversity. It trails on using the details you give it and on reading time. Future releases will explore fixes for these, and every round will be logged in `evals/`.
 
@@ -138,9 +166,17 @@ problem-lens is one of two Skills from OCKHAM:
 
 Use reasoning-lens when you want to stress-test how you are thinking about an idea before you pick a move.
 
+## Security and Privacy
+
+The Skill is Markdown only. It makes no network calls, stores nothing, and sends nothing to the maintainer. Like any prompt, it cannot guarantee that Claude ignores instructions hidden in text you paste. See [`SECURITY.md`](SECURITY.md) for how it handles input and how to report a problem.
+
 ## Contributing
 
-See `CONTRIBUTING.md`.
+See [`CONTRIBUTING.md`](CONTRIBUTING.md). To report a problem or suggest an addition, use an issue template:
+
+- [Bug report](https://github.com/davehallmon/problem-lens/issues/new?template=bug_report.md)
+- [New lens request](https://github.com/davehallmon/problem-lens/issues/new?template=lens_request.md)
+- [New ranking framework request](https://github.com/davehallmon/problem-lens/issues/new?template=framework_request.md)
 
 ## License
 

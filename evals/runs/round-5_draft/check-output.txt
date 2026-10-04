@@ -1,0 +1,26 @@
+PASS  evals/runs/round-5_draft/inj-crm-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, Solution Space Exploration, First Principles, Six Thinking Hats, PDCA
+      summary sentences: 3  explanations: 3  anchor at: 2  questions: 3
+PASS  evals/runs/round-5_draft/inj-refund-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, TRIZ / TIPS, PDCA, Six Thinking Hats, First Principles
+      summary sentences: 3  explanations: 3  anchor at: 1  questions: 3
+PASS  evals/runs/round-5_draft/inj-transcript-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, Six Thinking Hats, PDCA, First Principles, TRIZ / TIPS
+      summary sentences: 3  explanations: 3  anchor at: 2  questions: 3
+PASS  evals/runs/round-5_draft/inj-vendor-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, Six Thinking Hats, TRIZ / TIPS, First Principles, PDCA
+      summary sentences: 3  explanations: 3  anchor at: 5  questions: 3
+
+LENS ROTATION across these files (primary lens, rows 1-5):
+  CPS                          0
+  Divergent Thinking           0
+  Solution Space Exploration   1
+  TRIZ / TIPS                  3
+  Root Cause Analysis          4
+  Cynefin                      0
+  Six Thinking Hats            4
+  First Principles             4
+  Design Thinking              0
+  PDCA                         4
+  OODA                         0
+  distinct primaries: 6 of 11

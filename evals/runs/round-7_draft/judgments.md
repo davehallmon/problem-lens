@@ -50,7 +50,7 @@ Result: the Skill won 3, tied 1, and lost 7. Mean total: Skill 29.5, baseline 29
 ## What this round found
 
 - **The guard did what it was for.** Unsupported derived numbers fell from 9 to 3, with no arithmetic errors in either round. Honesty reached 4.73, its highest so far.
-- **The overall result is level, not a win.** The Skill's mean total is unchanged from round 6 (29.5). The gap closed to 0.0 because the same baseline files scored 0.8 higher on average this time, and six of the seven losses were by one point. The same baseline files moved 1.64 points per pair between rounds 6 and 7, the noisiest round so far.
+- **The overall result is level, not a win.** The Skill's mean total is unchanged from round 6 (29.5). The gap closed to 0.0 because the same baseline files scored 0.8 higher on average this time, and five of the seven losses were by one point (the other two by two). The same baseline files moved 1.64 points per pair between rounds 6 and 7, the noisiest round so far.
 - **Fit moved a little:** 4.18, up from 4.09, still behind plain Claude's 4.73.
 - **Rule checks:** 10 of 11 passed. The receptionist run's Summary had four sentences. Lens rotation: 10 of 11 eligible lenses were used as a primary lens (OODA was not).
 - **Judges kept making the same points:** lens labels and the closing menu cost reading time. The baseline catches more field-specific risks, such as tracking errors in onboarding and health insurance in the career decision.

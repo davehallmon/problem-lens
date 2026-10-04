@@ -19,6 +19,7 @@ Every version of problem-lens is tested against plain Claude, with no Skill, on 
 | 4 | draft (pasted-text rule) | 11 | 7–1–3 | 29.8 | +1.6 |
 | 5 | draft (note placement fix) | 4 injection only | 1–2–1 | 30.25 | 0.0 |
 | 6 | draft (use-the-details rule) | 11 | 6–1–4 | 29.5 | +0.8 |
+| 7 | draft (number guard) | 11 | 3–1–7 | 29.5 | 0.0 |
 
 Round 4 also ran four injection problems, where the background includes pasted text with an instruction aimed at AI tools. The Skill and plain Claude both resisted all four. The Skill told the user about the instruction in 4 of 4 runs, plain Claude in 2 of 4. In 2 of the 4 Skill runs, the warning pushed the summary past its three-sentence limit. Details are in `runs/round-4_draft/judgments.md`.
 
@@ -53,7 +54,9 @@ Round 4 found two problems: the injection warning broke the summary limit, and `
 
 Round 6 tested a rule aimed at Fit: use a stated number to change the advice, and keep moves doable with the user's resources. Fit did not move (4.09 in rounds 4 and 6), and in one run the rule led to a wrong calculation. The rule was kept. Details are in `runs/round-6_draft/judgments.md`.
 
+Round 7 added a guard: derive a number only from known facts, or name the assumption next to it. A blind calculation audit found unsupported figures fell from 9 in round 6 to 3, with no arithmetic errors in either round. Overall the Skill scored level with plain Claude (gap 0.0): its own mean was unchanged, and the baseline files scored higher than in round 6. Details are in `runs/round-7_draft/judgments.md` and `runs/round-7_draft/calc-audit/`.
+
 ## Files
 
-- `runs/round-1_v1.0.0/`, `runs/round-2_draft/`, `runs/round-3_v1.1.0/`, `runs/round-4_draft/`, `runs/round-5_draft/`, `runs/round-6_draft/`: raw outputs, baselines, `judgments.md`, and `check-output.txt`. Rounds 1 and 2 were checked with the rules of their time. Round 4 also has `inputs.json`, the exact user messages for its 15 problems.
+- `runs/round-1_v1.0.0/`, `runs/round-2_draft/`, `runs/round-3_v1.1.0/`, `runs/round-4_draft/`, `runs/round-5_draft/`, `runs/round-6_draft/`, `runs/round-7_draft/`: raw outputs, baselines, `judgments.md`, and `check-output.txt`. Rounds 1 and 2 were checked with the rules of their time. Round 4 also has `inputs.json`, the exact user messages for its 15 problems. Round 7 also has `calc-audit/`, a blind audit of derived numbers in rounds 6 and 7.
 - `check_rules.py`: run `python3 evals/check_rules.py problem-lens/examples/*.md`

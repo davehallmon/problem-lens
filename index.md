@@ -22,7 +22,7 @@ A Claude Skill that turns a messy problem into ranked options and a clear place 
 
 ## How It Was Tested
 
-Version 1.1.0 went 5–2–4 against plain Claude on eleven problems, scored by blind judges. Full results, including where it trails, are in [`evals/`](https://github.com/davehallmon/problem-lens/tree/main/evals).
+Version 1.2.0 scores about even with plain Claude on eleven problems, scored by blind judges. It leads on honesty and actionability and trails on fit and reading time. Full results, including where it trails, are in [`evals/`](https://github.com/davehallmon/problem-lens/tree/main/evals).
 
 ## The Family
 

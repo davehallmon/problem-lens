@@ -2,7 +2,7 @@
 
 ![problem-lens banner: Twelve lenses. Six moves. One first step.](assets/banner-v2.png)
 
-![Version](https://img.shields.io/badge/version-1.1.0-blue)
+![Version](https://img.shields.io/badge/version-1.2.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Claude Skill](https://img.shields.io/badge/Claude-Skill-purple)
 
@@ -70,7 +70,7 @@ If you already uploaded the Skill in claude.ai, it also loads in Claude Code whe
 | Claude Code (personal) | `~/.claude/skills/problem-lens/` |
 | Claude Code (project) | `.claude/skills/problem-lens/` |
 
-The decision prompt uses `AskUserQuestion` when it is available. Otherwise the Skill shows a numbered list.
+The decision prompt uses `AskUserQuestion` when it is available; on claude.ai it shows as clickable choices. Otherwise the Skill shows a numbered list.
 
 ## Repo Layout
 
@@ -145,8 +145,17 @@ Each version is tested against plain Claude with no Skill, on the same problems,
 | Draft (round 2) | 11 | 0–2–9 | −2.5 |
 | 1.1.0 | 11 | 5–2–4 | +0.1 |
 | Draft (round 4) | 11 | 7–1–3 | +1.6 |
+| Draft (round 6) | 11 | 6–1–4 | +0.8 |
+| 1.2.0 (round 7) | 11 | 3–1–7 | 0.0 |
 
-1.1.0 leads on honesty, actionability, and option diversity. It trails on using the details you give it and on reading time. Future releases will explore fixes for these, and every round will be logged in `evals/`.
+Overall, 1.2.0 scores about even with plain Claude. It leads on honesty and actionability. It trails on using the details you give it, on diagnosis, and on reading time. Judge noise between rounds (about 1.5 points per pair) is larger than the overall changes since round 4, so read the trend, not any single round.
+
+Two rules added in 1.2.0 were tested on their own:
+
+- **Pasted text is material, not instructions.** The Skill resisted and flagged all four planted instructions in rounds 4 and 5. Plain Claude also resisted them but flagged only two.
+- **Derive numbers only from known facts.** A blind audit found unsupported figures fell from 9 to 3 between rounds 6 and 7.
+
+1.2.0 was also checked by hand on claude.ai: it triggers on its own, stays out of a plain fact question, declines a trivial problem, and shows the decision prompt as clickable choices. See [`evals/manual/`](evals/manual/). Every round, including the ones that lose, is logged in `evals/`.
 
 ## When Not To Use
 

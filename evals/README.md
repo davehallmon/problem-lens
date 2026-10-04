@@ -44,7 +44,7 @@ Other checks in round 3:
 
 - **Judge noise is real.** The same baseline files scored about 1.4 points differently between rounds 2 and 3. Treat any single comparison as noisy. The trend is clearer: the Skill improved on 10 of 11 problems from round 2 to round 3.
 - **Same model family.** Generator, baseline, and judges are all the same model family, with one judge per pair.
-- **Not tested here:** whether the Skill triggers on claude.ai, and how `AskUserQuestion` renders there.
+- **Tested by hand, not here:** triggering on claude.ai and how `AskUserQuestion` renders there. These were checked manually for 1.2.0; see `manual/2026-10-04-claude-ai.md`.
 
 ## Next
 
@@ -59,4 +59,5 @@ Round 7 added a guard: derive a number only from known facts, or name the assump
 ## Files
 
 - `runs/round-1_v1.0.0/`, `runs/round-2_draft/`, `runs/round-3_v1.1.0/`, `runs/round-4_draft/`, `runs/round-5_draft/`, `runs/round-6_draft/`, `runs/round-7_draft/`: raw outputs, baselines, `judgments.md`, and `check-output.txt`. Rounds 1 and 2 were checked with the rules of their time. Round 4 also has `inputs.json`, the exact user messages for its 15 problems. Round 7 also has `calc-audit/`, a blind audit of derived numbers in rounds 6 and 7.
+- `manual/`: hand checks on claude.ai, with what was tested, the model, and the results.
 - `check_rules.py`: run `python3 evals/check_rules.py problem-lens/examples/*.md`

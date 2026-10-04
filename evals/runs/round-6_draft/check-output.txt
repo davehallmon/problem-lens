@@ -1,0 +1,47 @@
+PASS  evals/runs/round-6_draft/appspeed-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, PDCA, TRIZ / TIPS, First Principles, Six Thinking Hats
+      summary sentences: 3  explanations: 3  anchor at: 1  questions: 3
+PASS  evals/runs/round-6_draft/board-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, Six Thinking Hats, CPS, First Principles, PDCA
+      summary sentences: 3  explanations: 3  anchor at: 2  questions: 3
+PASS  evals/runs/round-6_draft/career-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, First Principles, Solution Space Exploration, Six Thinking Hats, PDCA
+      summary sentences: 3  explanations: 3  anchor at: 2  questions: 3
+PASS  evals/runs/round-6_draft/gym-skill-1.md
+      do first: Row 1  primaries: Six Thinking Hats, Root Cause Analysis, PDCA, First Principles, Divergent Thinking
+      summary sentences: 3  explanations: 3  anchor at: 2  questions: 3
+PASS  evals/runs/round-6_draft/library-skill-1.md
+      do first: Row 1  primaries: Design Thinking, Root Cause Analysis, Six Thinking Hats, TRIZ / TIPS, First Principles
+      summary sentences: 3  explanations: 3  anchor at: 2  questions: 3
+PASS  evals/runs/round-6_draft/onboarding-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, Six Thinking Hats, Design Thinking, First Principles, TRIZ / TIPS
+      summary sentences: 3  explanations: 3  anchor at: 2  questions: 3
+PASS  evals/runs/round-6_draft/receptionist-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, Six Thinking Hats, First Principles, Solution Space Exploration, PDCA
+      summary sentences: 3  explanations: 3  anchor at: 1  questions: 3
+PASS  evals/runs/round-6_draft/revenue-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, Six Thinking Hats, TRIZ / TIPS, PDCA, First Principles
+      summary sentences: 3  explanations: 3  anchor at: 2  questions: 3
+PASS  evals/runs/round-6_draft/standup-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, TRIZ / TIPS, PDCA, First Principles, Six Thinking Hats
+      summary sentences: 3  explanations: 3  anchor at: 2  questions: 3
+PASS  evals/runs/round-6_draft/supplier-skill-1.md
+      do first: Row 1  primaries: First Principles, Cynefin, TRIZ / TIPS, OODA, Root Cause Analysis
+      summary sentences: 3  explanations: 3  anchor at: 1  questions: 3
+PASS  evals/runs/round-6_draft/turnover-skill-1.md
+      do first: Row 1  primaries: Root Cause Analysis, First Principles, Cynefin, PDCA, CPS
+      summary sentences: 3  explanations: 3  anchor at: 2  questions: 3
+
+LENS ROTATION across these files (primary lens, rows 1-5):
+  CPS                          2
+  Divergent Thinking           1
+  Solution Space Exploration   2
+  TRIZ / TIPS                  6
+  Root Cause Analysis          11
+  Cynefin                      2
+  Six Thinking Hats            9
+  First Principles             11
+  Design Thinking              2
+  PDCA                         8
+  OODA                         1
+  distinct primaries: 11 of 11

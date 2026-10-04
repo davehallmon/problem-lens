@@ -51,7 +51,7 @@ Future releases will explore fixes for the weak spots: fit to the user's details
 
 Round 4 found two problems: the injection warning broke the summary limit, and `check_rules.py` misread numbered section headings. Round 5 reran the four injection problems with both fixed. All four runs passed every rule, and judge scores were level with plain Claude. Details are in `runs/round-5_draft/judgments.md`.
 
-Round 6 tested a rule aimed at Fit: use a stated number to change the advice, and keep moves doable with the user's resources. Fit did not move (4.09 in rounds 4 and 6), and in one run the rule led to a wrong calculation. Details are in `runs/round-6_draft/judgments.md`.
+Round 6 tested a rule aimed at Fit: use a stated number to change the advice, and keep moves doable with the user's resources. Fit did not move (4.09 in rounds 4 and 6), and in one run the rule led to a wrong calculation. The rule was kept. Details are in `runs/round-6_draft/judgments.md`.
 
 ## Files
 

@@ -144,6 +144,7 @@ Each version is tested against plain Claude with no Skill, on the same problems,
 | 1.0.0 | 3 | 0–0–3 | −6.0 |
 | Draft (round 2) | 11 | 0–2–9 | −2.5 |
 | 1.1.0 | 11 | 5–2–4 | +0.1 |
+| Draft (round 4) | 11 | 7–1–3 | +1.6 |
 
 1.1.0 leads on honesty, actionability, and option diversity. It trails on using the details you give it and on reading time. Future releases will explore fixes for these, and every round will be logged in `evals/`.
 

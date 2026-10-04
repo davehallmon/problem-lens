@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Check problem-lens outputs against the rules in problem-lens/SKILL.md (v1.2).
+"""Check problem-lens outputs against the rules in problem-lens/SKILL.md.
 
 Usage:
     python3 evals/check_rules.py FILE [FILE ...]
 
 Checks structure only: explanations, recommendation lines, table order, lenses, families,
-anchor, ranking line, questions, decision prompt, summary length, and links.
+anchor, ranking line, questions, decision prompt, summary length, the one-sentence
+pasted-text note, and links.
 It does not judge whether the solutions are good. Prints a lens-rotation
 summary across all files. Exits 1 if any file fails a rule.
 
@@ -71,7 +72,8 @@ def strip_md(s):
 def sentences(text):
     text = re.sub(r"\*\*[^*]*\*\*:?", "", text)
     text = re.sub(r"^\s*Summary[.:]?", "", text.strip())
-    parts = re.split(r"(?<=[.!?])\s+(?=[A-Z\"'`])", text.strip())
+    # A sentence can end inside closing quotes: ... "APPROVED." I treated ...
+    parts = re.split(r"(?:(?<=[.!?])|(?<=[.!?][\"”']))\s+(?=[A-Z\"'`“])", text.strip())
     return [p for p in parts if p.strip()]
 
 
@@ -81,6 +83,13 @@ def check(path, family, use_when):
     if "## Output" in text:
         text = text.split("## Output", 1)[1]
     text = "\n".join(l for l in text.splitlines() if not l.startswith("_Recorded run"))
+    # Some runs number their section headings ("**3. Recommendation**", "## 2. What's Likely
+    # Going On"). Drop the number so headings are not read as bullets, questions, or sentences.
+    text = re.sub(r"^(\s*(?:#+\s*\**|\*\*))\d+\.\s+(?=\S)", r"\1", text, flags=re.M)
+    # A "Note:" line about instructions in pasted text sits after the Summary and is
+    # checked on its own (one sentence), not counted as part of the Summary.
+    note_lines = [l for l in text.splitlines() if strip_md(l).strip().startswith("Note:")]
+    text = "\n".join(l for l in text.splitlines() if l not in note_lines)
     plain = strip_md(text)
     lines = text.splitlines()
     fails, info = [], {"primaries": [], "anchor": None}
@@ -201,6 +210,15 @@ def check(path, family, use_when):
         info["summary_sentences"] = n
         if n > 3:
             fails.append(f"summary has {n} sentences, limit is 3")
+
+    # Pasted-text note: at most one, one sentence
+    info["note"] = len(note_lines)
+    if len(note_lines) > 1:
+        fails.append(f"{len(note_lines)} 'Note:' lines, expected at most 1")
+    for nl in note_lines:
+        body = re.sub(r"^\s*Note:?\s*", "", strip_md(nl).strip())
+        if len(sentences(body)) > 1:
+            fails.append("'Note:' line is more than one sentence")
 
     # No links in a first answer
     if re.search(r"https?://", text):

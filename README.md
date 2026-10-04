@@ -28,17 +28,15 @@ See [`problem-lens/examples/onboarding-drop-off.md`](problem-lens/examples/onboa
 
 The Skill lives in the `problem-lens/` folder of this repo. Install that folder, not the whole repo.
 
-### claude.ai and the Claude desktop app
+### claude.ai
 
 1. Clone this repo.
 2. From the repo root, zip the Skill folder: `zip -r problem-lens.zip problem-lens`
-3. Turn on code execution in Settings.
+3. In claude.ai, turn on code execution in Settings.
 4. Go to **Customize > Skills**, click **+**, choose **Create skill**, then **Upload a skill**. Upload `problem-lens.zip`.
 5. Ask: "Analyze this problem: ..."
 
-The steps are the same on the web and in the desktop app. Uploaded Skills apply to your account, not to a single Project.
-
-Skills are built into Claude. You don't need to paste `SKILL.md` into a Project or into custom instructions. problem-lens is not an MCP server, so there is no `claude_desktop_config.json` to edit.
+Uploaded Skills apply to your account, not to a single Project.
 
 ### Claude Code (personal)
 
@@ -59,7 +57,7 @@ If you already uploaded the Skill in claude.ai, it also loads in Claude Code whe
 ## Requirements
 
 - **Claude access** with Skills support:
-  - claude.ai or the Claude desktop app, with code execution on
+  - claude.ai, with code execution on
   - Claude Code (CLI)
 - **A problem to analyze.** The Skill needs a problem statement and background context.
 - **No dependencies.** The Skill in `problem-lens/` is Markdown-only. No scripts, no packages, no API keys. The `evals/` folder holds a maintainer-only checker script that is not part of the install.
@@ -69,7 +67,6 @@ If you already uploaded the Skill in claude.ai, it also loads in Claude Code whe
 | Platform | How to install |
 |---|---|
 | claude.ai | Upload `problem-lens.zip` in **Customize > Skills** |
-| Claude desktop app | Same as claude.ai: **Customize > Skills** |
 | Claude Code (personal) | `~/.claude/skills/problem-lens/` |
 | Claude Code (project) | `.claude/skills/problem-lens/` |
 

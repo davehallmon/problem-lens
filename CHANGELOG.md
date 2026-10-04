@@ -5,29 +5,19 @@ This project follows Semantic Versioning.
 
 ## Tested With
 
-Only models and setups that were actually recorded are listed. Blank or "not recorded" means untested or unknown, not unsupported.
+| Version | Model | Not yet tested |
+|---|---|---|
+| 1.1.0 | Claude Opus 5.5 | Triggering on claude.ai; `AskUserQuestion` rendering |
 
-| Version | Model | Setup | Not yet tested |
-|---|---|---|---|
-| 1.1.0 | Claude Opus 5.5 | Agents given `SKILL.md` and `references/` only (recorded examples and eval round 3) | Triggering on claude.ai and the desktop app; `AskUserQuestion` rendering |
-| Draft (round 2) | Not recorded | Agents, eval round 2 | Same as above |
-| 1.0.0 | Not recorded | Agents, eval round 1 | Same as above |
+Earlier versions did not record the model.
 
 ## [Unreleased]
 
 ### Added
-- README: install steps for the Claude desktop app, a note that problem-lens is not an MCP server, and a note that Skills uploaded in claude.ai also load in Claude Code under the same account. Source: [Anthropic Help Center, "Use Skills in Claude"](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
 - README: "Repo Layout" tree, a copyable "Try First" prompt, a "Security and Privacy" section, and links to the three issue templates.
-- SECURITY.md: "How the Skill Handles Input", "Prompt Injection", and "Privacy" sections. Each behavior listed traces to `problem-lens/SKILL.md`. The prompt-injection section states the limit plainly instead of claiming protection.
-- Examples: a "Copy This Prompt" block above each Input section. The recorded outputs are unchanged.
+- README: a note that Skills uploaded in claude.ai also load in Claude Code when signed in with the same Claude account.
+- SECURITY.md: "How the Skill Handles Input", "Prompt Injection", and "Privacy" sections.
 - CHANGELOG: "Tested With" table.
-
-### Context
-- These changes respond to an outside review of the repo (rubric drafted with Gemini, review run by DeepSeek, scored 79/100). Accepted: desktop install guidance, safety documentation, repo tree, copyable prompts, compatibility table, and issue-template links.
-- Changed from the review: the review suggested pasting `SKILL.md` into Project instructions and adding a `claude_desktop_config.json` snippet. Skills are a built-in feature and problem-lens is not an MCP server, so the README points to the built-in install instead.
-- Already present before the review: `SECURITY.md`, `CONTRIBUTING.md`, and issue templates for bugs, lenses, and frameworks.
-- Not done yet: a demo GIF. It should be a screen recording of a real run, made by the maintainer, so it isn't added here.
-- No changes to `SKILL.md`, the lenses, or the ranking frameworks.
 
 ### Changed
 - New banner: "Twelve lenses. Six moves. One first step." with the OCKHAM maker mark. Removed the old `assets/banner.svg`.

@@ -1,13 +1,5 @@
 # Example: Onboarding Drop-Off
 
-## Copy This Prompt
-
-```
-Analyze this problem: our onboarding drop-off is 60% at step 3.
-
-Background: B2B SaaS, 200 signups per week, no user interviews yet.
-```
-
 ## Input
 
 Problem: Our onboarding drop-off is 60% at step 3.

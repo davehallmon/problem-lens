@@ -1,13 +1,5 @@
 # Example: Business Strategy
 
-## Copy This Prompt
-
-```
-Analyze this problem: revenue is flat for three quarters.
-
-Background: B2B services firm, 40 staff, no marketing team.
-```
-
 ## Input
 
 Problem: Revenue is flat for three quarters.

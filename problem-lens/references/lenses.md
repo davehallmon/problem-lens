@@ -2,7 +2,7 @@
 
 Twelve lenses in five families. For each family, pick the lens whose "Use when" trigger best fits the problem. Show only the winners.
 
-Each row in rows 1–5 takes its primary lens from a different family. Occam's Razor is reserved for the anchor.
+Each of the five non-anchor rows takes its primary lens from a different family. Occam's Razor is reserved for the anchor.
 
 | Family | Lenses |
 |---|---|
@@ -57,7 +57,7 @@ Use when: "the way it's done" is treated as the only way.
 ### Occam's Razor
 Pick the explanation with the fewest assumptions.
 Use when: the solution is buried under complexity.
-Anchor only. Never a primary lens in rows 1–5.
+Anchor only. Never a primary lens in any other row.
 
 ## Process Lenses
 

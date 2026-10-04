@@ -4,11 +4,11 @@ Default: Coverage.
 Offer others on request.
 
 ## Coverage
-Force diversity. Pick one solution from each of the five lens families, using the lens that best fits the problem. Merge overlaps.
-Then order the five by expected effect on the root problem, highest first. Break ties toward the cheaper, more reversible move.
+Force diversity. Pick one solution from each of the five lens families, using the lens that best fits the problem. Merge overlaps. Add the Occam's Razor anchor.
+Then put all six in the order to act: cheap checks that decide between the likely explanations come before costly bets, then order by expected effect on the root problem. Break ties toward the cheaper, more reversible move.
 Best when: the user needs options, not a single bet.
 
-Coverage picks which five rows appear. The other frameworks only re-order those rows. The recommendation can change when the order changes.
+Coverage picks which six rows appear. Every framework, Coverage included, sets the order to act, so Row 1 is always "Do this first". Re-ranking changes the recommendation.
 
 ## Impact vs. Effort
 Score each solution on impact and effort. Prefer high impact, low effort.

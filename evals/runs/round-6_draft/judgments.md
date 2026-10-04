@@ -58,3 +58,5 @@ Fit by problem, round 4 to round 6: up on 2 (library, turnover), the same on 7, 
 ## Bottom line
 
 The change did not do what it was meant to do. Fit stayed where it was, and one run turned the rule into a confident but wrong calculation.
+
+The maintainer kept the rule after this round. It stays in `SKILL.md` while later rounds watch Fit and the accuracy of any numbers the Skill works out.

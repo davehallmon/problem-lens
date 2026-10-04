@@ -1,6 +1,6 @@
 # problem-lens
 
-![problem-lens banner](assets/banner.png)
+![problem-lens banner: Twelve lenses. Six moves. One first step.](assets/banner.png)
 
 ![Version](https://img.shields.io/badge/version-1.1.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -126,6 +126,17 @@ Each version is tested against plain Claude with no Skill, on the same problems,
 - The problem is trivial.
 - You need code, not analysis.
 - The decision is already made.
+
+## The Family
+
+problem-lens is one of two Skills from OCKHAM:
+
+| Skill | Question | Shape |
+|---|---|---|
+| problem-lens | What should I do? | Twelve lenses, six ranked moves, one first step |
+| [reasoning-lens](https://github.com/davehallmon/reasoning-lens) | How should I think about this? | Seven philosophers' methods, one idea, the disagreements |
+
+Use reasoning-lens when you want to stress-test how you are thinking about an idea before you pick a move.
 
 ## Contributing
 

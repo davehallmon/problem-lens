@@ -8,7 +8,7 @@
 
 ## Scope
 
-This project contains Markdown files only. It has no executable code, no dependencies, and no network calls.
+The installed Skill (the `problem-lens/` folder) is Markdown only. It has no executable code, no dependencies, and no network calls. The `evals/` folder holds a maintainer-only Python checker, and `.github/workflows/` runs it and a weekly link check. Neither is part of the install.
 
 The realistic security surface is:
 

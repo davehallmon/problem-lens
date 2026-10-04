@@ -3,6 +3,16 @@
 All notable changes to this project are documented here.
 This project follows Semantic Versioning.
 
+## [Unreleased]
+
+### Changed
+- New banner: "Twelve lenses. Six moves. One first step." with the OCKHAM maker mark. Removed the old `assets/banner.svg`.
+- Added `assets/social-preview.png` (1280×640) for the GitHub link card.
+- README: added "The Family" section linking reasoning-lens.
+- GitHub Pages `index.md`: banner image and current copy.
+- SECURITY.md: scope now mentions the maintainer-only checker and workflows.
+- Bug report template: platform reads claude.ai / Claude Code.
+
 ## [1.1.0] — 2026-10-03
 
 ### Added

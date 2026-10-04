@@ -1,0 +1,23 @@
+name: Check examples against Skill rules
+
+on:
+  pull_request:
+    paths:
+      - "problem-lens/**"
+      - "evals/check_rules.py"
+  push:
+    branches: [main]
+    paths:
+      - "problem-lens/**"
+      - "evals/check_rules.py"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check worked examples
+        run: python3 evals/check_rules.py problem-lens/examples/*.md

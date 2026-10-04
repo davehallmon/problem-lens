@@ -1,0 +1,28 @@
+PASS  evals/runs/2026-10-03/career-skill-1.md
+      primaries: Root Cause Analysis, Six Thinking Hats, TRIZ / TIPS, First Principles, PDCA
+      summary sentences: 3  anchor 'Matches row': True  turn-1 questions: True
+PASS  evals/runs/2026-10-03/career-skill-2.md
+      primaries: Root Cause Analysis, First Principles, Six Thinking Hats, TRIZ / TIPS, PDCA
+      summary sentences: 3  anchor 'Matches row': True  turn-1 questions: True
+FAIL  evals/runs/2026-10-03/career-skill-3.md
+      primaries: Root Cause Analysis, First Principles, Six Thinking Hats, TRIZ / TIPS, PDCA
+      summary sentences: 5  anchor 'Matches row': False  turn-1 questions: True
+      - summary has 5 sentences, limit is 3
+PASS  evals/runs/2026-10-03/onboarding-skill-1.md
+      primaries: Root Cause Analysis, First Principles, Six Thinking Hats, Design Thinking, TRIZ / TIPS
+      summary sentences: 3  anchor 'Matches row': True  turn-1 questions: True
+PASS  evals/runs/2026-10-03/onboarding-skill-2.md
+      primaries: Root Cause Analysis, Design Thinking, Six Thinking Hats, First Principles, TRIZ / TIPS
+      summary sentences: 3  anchor 'Matches row': False  turn-1 questions: True
+PASS  evals/runs/2026-10-03/onboarding-skill-3.md
+      primaries: Root Cause Analysis, Design Thinking, First Principles, TRIZ / TIPS, Six Thinking Hats
+      summary sentences: 3  anchor 'Matches row': False  turn-1 questions: True
+PASS  evals/runs/2026-10-03/revenue-skill-1.md
+      primaries: Root Cause Analysis, First Principles, Design Thinking, TRIZ / TIPS, Six Thinking Hats
+      summary sentences: 3  anchor 'Matches row': True  turn-1 questions: True
+PASS  evals/runs/2026-10-03/revenue-skill-2.md
+      primaries: Root Cause Analysis, First Principles, TRIZ / TIPS, Six Thinking Hats, PDCA
+      summary sentences: 3  anchor 'Matches row': False  turn-1 questions: True
+PASS  evals/runs/2026-10-03/revenue-skill-3.md
+      primaries: Root Cause Analysis, First Principles, TRIZ / TIPS, PDCA, Six Thinking Hats
+      summary sentences: 3  anchor 'Matches row': True  turn-1 questions: True

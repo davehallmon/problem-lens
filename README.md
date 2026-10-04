@@ -55,7 +55,7 @@ Uploaded Skills apply to your account, not to a single Project.
   - claude.ai, with code execution on
   - Claude Code (CLI)
 - **A problem to analyze.** The Skill needs a problem statement and background context.
-- **No dependencies.** This Skill is Markdown-only. No scripts, no packages, no API keys.
+- **No dependencies.** The Skill in `problem-lens/` is Markdown-only. No scripts, no packages, no API keys. The `evals/` folder holds a maintainer-only checker script that is not part of the install.
 
 ### Supported Platforms
 

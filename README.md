@@ -28,15 +28,17 @@ See [`problem-lens/examples/onboarding-drop-off.md`](problem-lens/examples/onboa
 
 The Skill lives in the `problem-lens/` folder of this repo. Install that folder, not the whole repo.
 
-### claude.ai
+### claude.ai and the Claude desktop app
 
 1. Clone this repo.
 2. From the repo root, zip the Skill folder: `zip -r problem-lens.zip problem-lens`
-3. In claude.ai, turn on code execution in Settings.
+3. Turn on code execution in Settings.
 4. Go to **Customize > Skills**, click **+**, choose **Create skill**, then **Upload a skill**. Upload `problem-lens.zip`.
 5. Ask: "Analyze this problem: ..."
 
-Uploaded Skills apply to your account, not to a single Project.
+The steps are the same on the web and in the desktop app. Uploaded Skills apply to your account, not to a single Project.
+
+Skills are built into Claude. You don't need to paste `SKILL.md` into a Project or into custom instructions. problem-lens is not an MCP server, so there is no `claude_desktop_config.json` to edit.
 
 ### Claude Code (personal)
 
@@ -44,6 +46,8 @@ Uploaded Skills apply to your account, not to a single Project.
 2. Copy the `problem-lens/` folder into `~/.claude/skills/`.
 3. Restart Claude Code.
 4. Ask: "Analyze this problem: ..."
+
+If you already uploaded the Skill in claude.ai, it also loads in Claude Code when you sign in with the same Claude account.
 
 ### Claude Code (project)
 
@@ -55,7 +59,7 @@ Uploaded Skills apply to your account, not to a single Project.
 ## Requirements
 
 - **Claude access** with Skills support:
-  - claude.ai, with code execution on
+  - claude.ai or the Claude desktop app, with code execution on
   - Claude Code (CLI)
 - **A problem to analyze.** The Skill needs a problem statement and background context.
 - **No dependencies.** The Skill in `problem-lens/` is Markdown-only. No scripts, no packages, no API keys. The `evals/` folder holds a maintainer-only checker script that is not part of the install.
@@ -65,16 +69,42 @@ Uploaded Skills apply to your account, not to a single Project.
 | Platform | How to install |
 |---|---|
 | claude.ai | Upload `problem-lens.zip` in **Customize > Skills** |
+| Claude desktop app | Same as claude.ai: **Customize > Skills** |
 | Claude Code (personal) | `~/.claude/skills/problem-lens/` |
 | Claude Code (project) | `.claude/skills/problem-lens/` |
 
 The decision prompt uses `AskUserQuestion` when it is available. Otherwise the Skill shows a numbered list.
 
+## Repo Layout
+
+Only the `problem-lens/` folder is the Skill. Everything else supports development and testing.
+
+```
+problem-lens/                 repo root
+├── problem-lens/             the Skill (install this folder)
+│   ├── SKILL.md              instructions Claude follows
+│   ├── references/           lenses, ranking frameworks, bias guards, output format, Learn more links
+│   └── examples/             three recorded, unedited runs
+├── evals/                    test rounds against plain Claude, plus the rule checker
+├── assets/                   banner and social preview
+├── .github/                  issue templates, PR template, CI checks
+├── CHANGELOG.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── index.md                  GitHub Pages landing page
+└── LICENSE
+```
+
 ## Try First
 
+Copy this prompt:
+
+```
 Analyze this problem: our onboarding drop-off is 60% at step 3.
 
 Background: B2B SaaS, 200 signups per week, no user interviews yet.
+```
 
 ## Lenses
 
@@ -138,9 +168,17 @@ problem-lens is one of two Skills from OCKHAM:
 
 Use reasoning-lens when you want to stress-test how you are thinking about an idea before you pick a move.
 
+## Security and Privacy
+
+The Skill is Markdown only. It makes no network calls, stores nothing, and sends nothing to the maintainer. Like any prompt, it cannot guarantee that Claude ignores instructions hidden in text you paste. See [`SECURITY.md`](SECURITY.md) for how it handles input and how to report a problem.
+
 ## Contributing
 
-See `CONTRIBUTING.md`.
+See [`CONTRIBUTING.md`](CONTRIBUTING.md). To report a problem or suggest an addition, use an issue template:
+
+- [Bug report](https://github.com/davehallmon/problem-lens/issues/new?template=bug_report.md)
+- [New lens request](https://github.com/davehallmon/problem-lens/issues/new?template=lens_request.md)
+- [New ranking framework request](https://github.com/davehallmon/problem-lens/issues/new?template=framework_request.md)
 
 ## License
 

@@ -1,5 +1,13 @@
 # Example: Career Decision
 
+## Copy This Prompt
+
+```
+Analyze this problem: should I leave my stable job to join a startup?
+
+Background: 8 years experience, two kids, six months of savings.
+```
+
 ## Input
 
 Problem: Should I leave my stable job to join a startup?

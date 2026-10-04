@@ -1,12 +1,19 @@
 # Output Format
 
-## Summary
-Three sentences or less.
+See `SKILL.md` for the full rules. This file is a quick reference.
 
-## Solution Table
-Six rows. Five solutions plus the Occam's Razor anchor. Rows 1–5 take primary lenses from five different families. See `SKILL.md` for the full table rules.
+## Order
 
-| Priority | Solution | Lens Tags | When To Use This Lens | Rationale | Risk |
+1. **Summary** — three sentences or fewer. Assumptions start with "Assuming".
+2. **Recommendation** — `Do this first: Row N — …, because …` and `Switch to Row M if …`.
+3. **Table** — five solution rows plus the Occam's Razor anchor.
+4. **Ranking line** — the framework in use and the alternatives.
+5. **Questions That Would Change the Pick** — up to three. Skip if none.
+6. **Decision prompt** — four options.
+
+## Table
+
+| Priority | Solution | Lens | Why This Lens | Rationale | Risk |
 |---|---|---|---|---|---|
 | 1 | | | | | |
 | 2 | | | | | |
@@ -15,16 +22,14 @@ Six rows. Five solutions plus the Occam's Razor anchor. Rows 1–5 take primary 
 | 5 | | | | | |
 | Anchor | | Occam's Razor | | | |
 
-## Ranking Line
-One line naming the framework in use and listing the alternatives.
-
 ## Decision Prompt
+
 Use `AskUserQuestion`. Multi-select. Options:
 
 - Expand a solution
 - Add more solutions
 - Re-rank
-- Done
+- Learn more
 
 If `AskUserQuestion` is not available, show the four options as a numbered list. Ask the user to reply with one or more numbers.
 
@@ -34,5 +39,5 @@ If `AskUserQuestion` is not available, show the four options as a numbered list.
 - Active voice.
 - No clichés.
 - No filler.
-- No citations unless asked.
+- No links unless the user picks Learn more, and then only links from `references/learn-more.md`.
 - Never more than six rows.

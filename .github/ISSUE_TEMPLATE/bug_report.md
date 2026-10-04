@@ -29,6 +29,6 @@ Paste the Skill's output.
 
 ## Environment
 
-- Platform: Claude Projects / Claude Code
+- Platform: claude.ai / Claude Code
 - Claude model: 
 - Skill version:

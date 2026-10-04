@@ -1,12 +1,12 @@
 # problem-lens
 
-![problem-lens banner: Twelve lenses. Six moves. One first step.](assets/banner.png)
+![problem-lens banner: Twelve lenses. Six moves. One first step.](assets/banner-v2.png)
 
 ![Version](https://img.shields.io/badge/version-1.1.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Claude Skill](https://img.shields.io/badge/Claude-Skill-purple)
 
-A Claude Skill that tells you what to do first about a problem, backed by five diverse solutions and an Occam's Razor anchor, each from a lens chosen to fit the problem.
+A Claude Skill that turns a messy problem into ranked options and a clear place to start. It leads with what to do first, backed by five solutions from five lens families and an Occam's Razor anchor, each from a lens chosen to fit the problem.
 
 ## Why
 

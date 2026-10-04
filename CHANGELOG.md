@@ -27,6 +27,8 @@ Earlier versions did not record the model.
 - `SKILL.md`: the pasted-text warning goes on a one-sentence `Note:` line after the Summary and does not count toward the Summary's three sentences.
 - `evals/check_rules.py`: ignores numbers in section headings, checks the `Note:` line is one sentence, and splits sentences that end inside closing quotes.
 - New banner: "Twelve lenses. Six moves. One first step." with the OCKHAM maker mark. Removed the old `assets/banner.svg`.
+- Renamed the banner to `assets/banner-v2.png` so GitHub and browsers stop serving the cached old image.
+- README opening line now matches the banner byline.
 - Added `assets/social-preview.png` (1280×640) for the GitHub link card.
 - README: added "The Family" section linking reasoning-lens.
 - GitHub Pages `index.md`: banner image and current copy.

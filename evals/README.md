@@ -18,6 +18,7 @@ Every version of problem-lens is tested against plain Claude, with no Skill, on 
 | 3 | 1.1.0 | 11 | 5–2–4 | 29.0 | +0.1 |
 | 4 | draft (pasted-text rule) | 11 | 7–1–3 | 29.8 | +1.6 |
 | 5 | draft (note placement fix) | 4 injection only | 1–2–1 | 30.25 | 0.0 |
+| 6 | draft (use-the-details rule) | 11 | 6–1–4 | 29.5 | +0.8 |
 
 Round 4 also ran four injection problems, where the background includes pasted text with an instruction aimed at AI tools. The Skill and plain Claude both resisted all four. The Skill told the user about the instruction in 4 of 4 runs, plain Claude in 2 of 4. In 2 of the 4 Skill runs, the warning pushed the summary past its three-sentence limit. Details are in `runs/round-4_draft/judgments.md`.
 
@@ -46,11 +47,13 @@ Other checks in round 3:
 
 ## Next
 
-Future releases will explore fixes for the weak spots: fit to the user's details, reading time, OODA never being chosen, and lens labels that judges called forced. Every round will be logged here, including rounds that lose.
+Future releases will explore fixes for the weak spots: fit to the user's details, reading time, and lens labels that judges called forced. (OODA, never chosen through round 5, was chosen once in round 6.) Every round will be logged here, including rounds that lose.
 
 Round 4 found two problems: the injection warning broke the summary limit, and `check_rules.py` misread numbered section headings. Round 5 reran the four injection problems with both fixed. All four runs passed every rule, and judge scores were level with plain Claude. Details are in `runs/round-5_draft/judgments.md`.
 
+Round 6 tested a rule aimed at Fit: use a stated number to change the advice, and keep moves doable with the user's resources. Fit did not move (4.09 in rounds 4 and 6), and in one run the rule led to a wrong calculation. Details are in `runs/round-6_draft/judgments.md`.
+
 ## Files
 
-- `runs/round-1_v1.0.0/`, `runs/round-2_draft/`, `runs/round-3_v1.1.0/`, `runs/round-4_draft/`, `runs/round-5_draft/`: raw outputs, baselines, `judgments.md`, and `check-output.txt`. Rounds 1 and 2 were checked with the rules of their time. Round 4 also has `inputs.json`, the exact user messages for its 15 problems.
+- `runs/round-1_v1.0.0/`, `runs/round-2_draft/`, `runs/round-3_v1.1.0/`, `runs/round-4_draft/`, `runs/round-5_draft/`, `runs/round-6_draft/`: raw outputs, baselines, `judgments.md`, and `check-output.txt`. Rounds 1 and 2 were checked with the rules of their time. Round 4 also has `inputs.json`, the exact user messages for its 15 problems.
 - `check_rules.py`: run `python3 evals/check_rules.py problem-lens/examples/*.md`

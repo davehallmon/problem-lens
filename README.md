@@ -1,6 +1,6 @@
 # problem-lens
 
-![problem-lens banner: Twelve lenses. Six moves. One first step.](assets/banner-v2.png)
+![problem-lens banner](assets/banner-v2.png)
 
 ![Version](https://img.shields.io/badge/version-1.2.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -190,3 +190,5 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md). To report a problem or suggest an addi
 ## License
 
 MIT. See `LICENSE`.
+
+![OCCAMI](assets/footer.png)

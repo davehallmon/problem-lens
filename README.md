@@ -1,6 +1,6 @@
 # problem-lens
 
-![problem-lens banner](assets/banner-v2.png)
+![problem-lens banner](assets/banner.png)
 
 ![Version](https://img.shields.io/badge/version-1.2.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)

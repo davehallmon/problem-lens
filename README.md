@@ -20,6 +20,36 @@ Most problem-solving prompts give you one angle. This one picks the best-fitting
 - Returns six moves in the order to act: five solutions from five lens families plus an Occam's Razor anchor.
 - Ends with a prompt to expand a solution, add more, re-rank, or learn more about a lens.
 
+## How It Works
+
+problem-lens follows a structured decision process rather than applying the same framework to every problem.
+
+```mermaid
+graph TD
+    A["Problem received"] --> B{"Should problem-lens handle it?"}
+    B -->|No| C["Answer directly"]
+    B -->|Yes| D{"Is the stated problem a symptom?"}
+    D -->|Yes| E["Name the likely root problem"]
+    D -->|No| F["Keep the stated problem"]
+    E --> G["Form competing explanations and checks"]
+    F --> G
+    G --> H["Select one lens from each of five families"]
+    H --> I["Generate five candidates before ranking"]
+    I --> J{"Do any candidates use the same mechanism?"}
+    J -->|Yes| K["Merge duplicates and replace from the same family"]
+    J -->|No| L["Keep all five candidates"]
+    K --> M["Add a distinct Occam's Razor anchor"]
+    L --> M
+    M --> N["Rank all six moves"]
+    N --> O["Recommend Row 1 and define the switch signal"]
+    O --> P["Present the result and next actions"]
+    P --> Q{"What does the user choose next?"}
+    Q -->|Expand| R["Expand only the selected solution"]
+    Q -->|Add more| S["Generate from unused lenses"]
+    Q -->|Re-rank| T["Reorder the same six moves"]
+    Q -->|Learn more| U["Explain selected lenses and sources"]
+```
+
 ## Sample Output
 
 See [`problem-lens/examples/onboarding-drop-off.md`](problem-lens/examples/onboarding-drop-off.md) for a full run on the "Try First" problem below.

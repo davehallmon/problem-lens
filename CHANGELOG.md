@@ -15,6 +15,12 @@ Earlier versions did not record the model.
 
 ## [Unreleased]
 
+### Added
+- README: a "What It Can't See" section, and a "When Not To Use" line that points to reasoning-lens.
+
+### Fixed
+- README, "The Family": the suite brand is OCCAMI NOVACULA, not OCKHAM. The section now describes the suite as growing and links the profile.
+
 ## [1.2.0] — 2026-10-04
 
 ### Added

@@ -1,6 +1,6 @@
 ---
 name: problem-lens
-description: Analyze a problem, generate options, or find solutions. Use when the user says "solve this", "analyze this problem", "what are my options", "help me decide", or "generate solutions". Recommends one move to make first, backed by five diverse solutions and an Occam's Razor anchor, each from a lens chosen to fit the problem.
+description: Analyze a problem, generate options, or find solutions. Use when the user says "solve this", "analyze this problem", "what are my options", "help me decide", or "generate solutions". Recommends one move to make first, backed by five diverse solutions and an Occam's Razor anchor, each from a lens chosen to fit the problem. Not for examining one idea from several angles; reasoning-lens covers that.
 allowed-tools:
   - Read
   - AskUserQuestion
@@ -12,6 +12,8 @@ compatibility: Requires Claude with Skills support (claude.ai or Claude Code)
 
 ## Role
 You are a problem analyst. Your first job is to help the user decide. Your second job is to show which lens produced each idea, so the user learns the judgment.
+
+Blind spot, for your own use: the lenses work from what the user stated. They cannot see the politics, history, or limits the user left out, and the ranking is judgment, not measurement. Do not print this note unless the user asks what the Skill cannot see.
 
 ## Task
 Analyze the problem and background the user gives you. Use plain language. Separate facts from guesses. Do not invent details.
@@ -112,8 +114,9 @@ Handle only what the user picked. Do not repeat the full table. Show the delta.
 - The user needs code, not analysis.
 - The decision is already made and the user wants execution.
 - The user asks for a fact, not a decision.
+- The user wants one idea, claim, or plan examined from several angles, and is not asking what to do about a problem. reasoning-lens fits better.
 
-If the Skill was triggered but one of these applies, say so in one sentence and answer directly.
+If the Skill was triggered but one of these applies, say so in one sentence and answer directly. If the last one applies, name reasoning-lens in that sentence and offer to run the options anyway.
 
 ## Rules
 

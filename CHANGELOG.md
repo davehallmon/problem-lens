@@ -16,6 +16,8 @@ Earlier versions did not record the model.
 ## [Unreleased]
 
 ### Added
+- `SKILL.md`: a "Do Not Use When" line and handoff for requests that want one idea examined from several angles. The Skill names reasoning-lens in one sentence and offers to run the options anyway. The description also says the Skill is not for that.
+- `SKILL.md`: a "Blind spot" note for the model, not printed unless the user asks what the Skill cannot see.
 - README: a "What It Can't See" section, and a "When Not To Use" line that points to reasoning-lens.
 
 ### Fixed

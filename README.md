@@ -48,6 +48,16 @@ graph TD
     Q -->|Add more| S["Generate from unused lenses"]
     Q -->|Re-rank| T["Reorder the same six moves"]
     Q -->|Learn more| U["Explain selected lenses and sources"]
+
+    classDef start fill:#F2501D,color:#FFFFFF,stroke:#111827,stroke-width:2px;
+    classDef decision fill:#FFF1EB,color:#111827,stroke:#F2501D,stroke-width:2px;
+    classDef core fill:#111827,color:#FFFFFF,stroke:#F2501D,stroke-width:2px;
+    classDef outcome fill:#FFF8F4,color:#111827,stroke:#111827,stroke-width:1.5px;
+
+    class A start;
+    class B,D,J,Q decision;
+    class G,H,I,M,N,O,P core;
+    class C,E,F,K,L,R,S,T,U outcome;
 ```
 
 ## Sample Output

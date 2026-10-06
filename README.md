@@ -203,10 +203,15 @@ Two rules added in 1.2.0 were tested on their own:
 - The problem is trivial.
 - You need code, not analysis.
 - The decision is already made.
+- You want one idea examined from several angles, not ranked options. Use [reasoning-lens](https://github.com/davehallmon/reasoning-lens) for that.
+
+## What It Can't See
+
+The lenses work from what you tell them. They cannot see the politics, history, or limits you leave out, and the ranking is judgment, not measurement. Treat the first row as a place to begin.
 
 ## The Family
 
-problem-lens is one of two Skills from OCKHAM:
+problem-lens is part of [OCCAMI NOVACULA](https://github.com/davehallmon), a growing suite of Skills. Two are published:
 
 | Skill | Question | Shape |
 |---|---|---|

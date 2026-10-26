@@ -21,7 +21,10 @@ Earlier versions did not record the model.
 - README: a "What It Can't See" section, and a "When Not To Use" line that points to reasoning-lens.
 
 ### Fixed
-- README, "The Family": the suite brand is OCCAMI NOVACULA, not OCKHAM. The section now describes the suite as growing and links the profile.
+- README, "The Family": problem-lens is part of Organon, the thinking suite by Ockham. The section describes the suite as growing and links the profile.
+
+### Changed
+- Brand: suite renamed from OCCAMI NOVACULA to Organon, by Ockham. Ockham is the maker's mark; Novacula now names a separate writing suite. The README opens with "Organon: thinking tools by Ockham." No Skill files changed.
 
 ## [1.2.0] — 2026-10-04
 

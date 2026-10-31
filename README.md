@@ -1,5 +1,7 @@
 # problem-lens
 
+**Organon: thinking tools by Ockham.**
+
 ![problem-lens banner](assets/banner.png)
 
 ![Version](https://img.shields.io/badge/version-1.2.0-blue)
@@ -211,7 +213,7 @@ The lenses work from what you tell them. They cannot see the politics, history, 
 
 ## The Family
 
-problem-lens is part of [OCCAMI NOVACULA](https://github.com/davehallmon), a growing suite of Skills. Two are published:
+problem-lens is part of [Organon](https://github.com/davehallmon), the growing suite of thinking tools by Ockham. Two are published:
 
 | Skill | Question | Shape |
 |---|---|---|
@@ -236,4 +238,4 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md). To report a problem or suggest an addi
 
 MIT. See `LICENSE`.
 
-![OCCAMI](assets/footer.png)
+![Ockham](assets/footer.png)
